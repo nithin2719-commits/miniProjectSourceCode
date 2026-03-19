@@ -1,0 +1,30 @@
+Requirements for this project
+
+Overview
+- This repository contains C source files, prebuilt Windows executables, data files, and documentation. No external libraries are required beyond a standard C compiler and the C standard library.
+
+Build tools (recommended)
+- GCC (MinGW or MinGW-w64) or Microsoft Visual C++ (cl)
+- make (optional, for convenience)
+
+How to build (examples)
+- With GCC (MinGW on Windows):
+  gcc trans.c -o trans.exe
+  gcc trans_first_version.c -o trans_first_version.exe
+  gcc trans_modified_current.c -o trans_modified_current.exe
+
+- With MSVC (Developer Command Prompt):
+  cl /Fe:trans.exe trans.c
+
+Per-file requirements and notes
+- trans.c, trans_first_version.c, trans_modified_current.c: C source files; require a C compiler (C89/C99 compatible). No third-party libraries.
+- trans.exe, trans_latest.exe: Prebuilt Windows executables; run on Windows (no extra dependencies expected).
+- accounts.txt, clients.dat, credit.dat, transactions.log: Data files used by the program at runtime; ensure they are present and have correct permissions.
+- README.md, MINI PROJECT Guidelines.pdf: Documentation; no runtime requirements.
+
+Runtime environment
+- Tested on Windows (Windows_NT). The C programs use standard file I/O; they should build and run on POSIX systems if compiled there, but provided executables are Windows binaries.
+
+Notes
+- If additional libraries are added later, list them here with exact package names and versions (e.g., libxyz 1.2.3).
+- If you want a build script or Makefile added, request it and it can be created.
